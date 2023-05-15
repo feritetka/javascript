@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="welcomeText">Hello World</h1>
+
+    <article></article>
+
+    <p class="contact">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero asperiores
+      doloremque itaque sit cupiditate a commodi, ab cumque accusantium ipsum
+      voluptas debitis unde repellat dolor inventore similique. Facere, unde
+      nostrum?
+    </p>
+
+    <script>
+        const welcomeTextEl = document.getElementById("welcomeText");
+        welcomeTextEl.innerHTML += ".";
+
+        const articleEl = document.getElementsByTagName("article");
+        articleEl[0].innerHTML = "Hello";
+
+        const contactEl = document.getElementsByClassName("contact");
+        contactEl[0].innerHTML += "Hi!";
+</script>
+  </body>
+</html>
