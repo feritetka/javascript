@@ -11,6 +11,9 @@
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
     crossorigin="anonymous"
   />
+
+
+
 </head>
 <body class="p-5">
     
@@ -18,15 +21,19 @@
         <input id="txtCity" type="text" class="form-control" placeholder="">
         <button class="btn btn-outline-info" type="button" id="btnAdd">Add</button>
     </div>
+
     <ul id="lstCities" class="list-group list-group-numbered">
         
     </ul>
+
     <button class="btn btn-outline-danger mt-4" type="button" id="btnDelete">Delete</button>
+
     <script>
         const txtCity = document.getElementById("txtCity");
         const btnAdd = document.getElementById("btnAdd");
         const lstCities = document.getElementById("lstCities");
         const btnDelete = document.getElementById("btnDelete");
+
         btnAdd.addEventListener("click", ()=>{
             const newLi = document.createElement("li");
             newLi.innerHTML = txtCity.value;
@@ -38,15 +45,19 @@
             txtCity.value = "";
             txtCity.focus();
         })
+
         btnDelete.addEventListener("click", ()=>{
             const deletedItems = lstCities.querySelectorAll(".bg-danger");
             const result = confirm(`${deletedItems.length} items are deleting. Are you sure?`);
+
             if(!result) return;
-            
+
             deletedItems.forEach((item)=>{
                 item.remove();
             })
         });
+
+
     </script>
 </body>
 </html>
